@@ -52,7 +52,7 @@ nav ul li a::after{
     left: 50%;
     transform: translateX(-50%);
     background: #fff;
-    transition: width 0.3s;
+    transition: width 0.10s;
 }
 nav ul li a:hover::after{
     width: 50%;
@@ -70,6 +70,17 @@ nav ul li a:hover::after{
     font-size: 190px;
     line-height: 160px;
     margin-left: -10px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url("images/back.png");
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
 }
 .text-box h3{
     font-size: 40px;
@@ -95,7 +106,16 @@ nav ul li a:hover::after{
     line-height: 15px;
     margin-left: 5px;
 }
-
+.social-icons{
+    position: absolute;
+    right: 5%;
+    bottom: 8%;
+}
+.social-icons img{
+    width: 25px;
+    display: block;
+    margin: 25px 5px;
+}
 
 
 

@@ -7,7 +7,7 @@
 .container{
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.3),transparent),url(images/background.png);
+    background-image: linear-gradient(rgba(0,0,0,0.3),transparent),url("https://media.istockphoto.com/photos/bluered-light-background-picture-id1203930843?k=20&m=1203930843&s=612x612&w=0&h=2vzqadh29UAfGMDZ6m-P9prtrXcg0HwY9bFCub0eI_k=");
     background-size: cover;
     background-position: center;
     padding: 0 8%;

@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(#673ab7,#190838);
+    overflow: hidden;
+}
+.box{
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+.box .box1{
+    background: #673ab7;
+    transform-origin: right;
+    transform: perspective(500px) 
+              translateX(-50%)
+              rotateY(-25deg);
+}
+.box .box2{
+    background: #40158c;
+    transform-origin: left;
+    transform: perspective(500px) 
+              translateX(50%)
+              rotateY(25deg);
+}
+.box .box1 h4{
+    color: #fff;
+}
+.box .box2 h4{
+    color: rgba(255, 255, 255, .2);
+       left: -100%;
+}
+.box h4{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    white-space:nowrap;
+    left: 0;
+    font-size: 2.5em;
+    animation: ani 15s linear infinite;
+}
+@keyframes ani{
+    0%{
+        transform: translate(400px);
+    }
+    100%{
+        transform: translate(-100%);
+    }
+}

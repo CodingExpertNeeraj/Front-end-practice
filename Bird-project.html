@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            padding: 15px;
+            background-color: black;
+            color: aqua;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Javascript can change HTML Attribute value </h1>
+    <button onclick="document.getElementById('myImage').src='images/eagal.gif'">fly </button>
+    <img src="images/eagal.gif" id="myImage" width="500px" alt="">
+
+    <button onclick="document.getElementById('myImage').src='images/bird2.png'">stop </button>
+</body>
+</html>

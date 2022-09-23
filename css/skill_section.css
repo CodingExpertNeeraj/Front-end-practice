@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'monospace' sans-serif;
+    background-color: black;
+    color: white;
+}
+.skill{
+    margin: auto;
+    width: 1100px;
+    padding: 100px 0;
+}
+.skill h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+.content{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+.left{
+    width: 50%;
+}
+.left h1{
+    text-align: left;
+    font-size: 30px;
+}
+.left p{
+    font-size: 18px;
+    margin: 25px 0;
+}
+.left a{
+    background-color:crimson;
+    color: white;
+    padding: 8px 16px;
+    border: 2px solid crimson;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+.left a:hover{
+    background-color: transparent;
+    color: crimson;
+}
+.right{
+    flex: 1;
+    margin-left: 30px;
+}
+.right .line{
+    margin-bottom: 15px;
+}
+.right .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.right .info span{
+    font-weight: 500;
+    font-size: 18px;
+}
+.right .bars{
+    background-color: lightgray;
+    height: 5px;
+    width: 100%;
+    position: relative;
+}
+.right .bars::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-color: crimson;
+}
+.right .html::before{
+    width: 90%;
+}
+
+.right .css::before{
+    width: 75%;
+}
+
+.right .python::before{
+    width: 10%;
+}
+
+.right .Ruby::before{
+    width: 3%;
+}
+
+.right .js::before{
+    width: 60%;
+}
+
+.right .java::before{
+    width: 15%;
+}
+
+.right .php::before{
+    width: 2%;
+}

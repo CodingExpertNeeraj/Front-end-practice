@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cm to inch convertor</title>
+</head>
+<style>
+    .container{
+        background-color: aqua;
+        padding: 80px;
+        margin: 230px;
+        justify-content: center; 
+         align-items: center; 
+    }
+    input{
+        font-size: 20px;
+        display: inline-block;
+        /* margin: 1px; */
+    }
+    h1{
+        text-align: center;
+    }
+    
+</style>
+<body>
+    <div class="container">
+
+        <!-- <div class="cm"></div>
+        <div class="inch"></div> -->
+        <h1>Centimiter to inch converter</h1>
+
+      CM :  <input type="number" value="0" id="cm">
+      Inch :  <input type="number" value="0" id="inch">
+    </div>
+
+    <script>
+     let cm =   document.getElementById('cm')
+     let inch = document.getElementById('inch')
+
+cm.addEventListener('input', function(){
+    let c = this.value
+    let i = c*0.3937;
+    inch.value = i
+    console.log(this.value + "Neeraj")
+})
+
+inch.addEventListener('input', function(){
+    let i = this.value;
+    let c = i/0.3937
+    cm.value = c;
+})
+    </script>
+</body>
+</html>

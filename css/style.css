@@ -1,0 +1,73 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+.Section_top{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-image: url(images/image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    justify-content: center;
+    animation: change 10s infinite ease-in-out;
+}
+.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+
+}
+.content h1{
+    color: #fff;
+    font-size: 60px;
+    letter-spacing: 15px;
+}
+.content h1 span{
+    color: #111;
+}
+.content a{
+    background: #85c1ee;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.content a:hover{
+    background: #034e88;
+    color: #fff;
+}
+@keyframes change{
+    0%
+    {
+        background-image: url("https://media.istockphoto.com/photos/large-areas-of-wind-power-in-the-mountains-picture-id1276543539?b=1&k=20&m=1276543539&s=170667a&w=0&h=fAGJDgkn8-h38YP-qMItLAhVLP7a8Rip-KE5lA5MmSE=");
+    }
+    20%
+    {
+        background-image: url("https://media.istockphoto.com/photos/empty-dirt-beach-with-traces-against-canadian-rockies-picture-id1272710341?b=1&k=20&m=1272710341&s=170667a&w=0&h=Ylyf82GQFpWLXk2Hng4qxASyy1EbGo3deNsEy3ZPIQg=");
+    }
+    40%
+    {
+        background-image: url("https://images.unsplash.com/photo-1434725039720-aaad6dd32dfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8aGlsbHN8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+    }
+    60%
+    {
+        background-image: url("https://media.istockphoto.com/photos/view-of-gurtnellen-a-village-in-swiss-alps-picture-id615235922?k=20&m=615235922&s=612x612&w=0&h=UeUCWYzy41uUgEm9VJJNx9Y2qJ3bTtSKBOhy4r_8trY=");
+    }
+    80%
+    {
+        background-image: url("https://media.istockphoto.com/photos/panorama-of-starry-night-in-norther-part-of-india-picture-id686556386?k=20&m=686556386&s=612x612&w=0&h=3xFzDXIF2qWcj8MG7M_x3elS5W6zLND1J1JtBc2zP8U=");
+    }
+    100%
+    {
+        background-image: url("https://media.istockphoto.com/photos/beautiful-evening-landscape-photograph-in-nuwara-eliya-opposite-of-picture-id1299561504?k=20&m=1299561504&s=612x612&w=0&h=hQrsgqXgjyZ9p-yF5hZS9iWQdH-53Qr1qT1HL9lCN-k=");
+    }
+}

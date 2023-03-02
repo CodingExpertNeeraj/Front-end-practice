@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>progress tag</title>
 </head>
+
 <body>
     <h1>hello this is progress tag</h1>
 
-  progress :  <progress value="30" max="100"></progress> <br><br>
-   meter tag : <meter min="0" max="100" value="40"> </meter>
+    progress : <progress value="30" max="100"></progress> <br><br>
+    meter tag : <meter min="0" max="100" value="40"> </meter>
+
+    <h1 class="haha">hello world </h1>
+
+    <div style="height: 200px; border: 2px solid red; width: 300px;"></div>
+
+    <script>
+        let x = document.getElementsByClassName('haha')[0];
+
+        x.hasAttribute('class', 'haha');
+
+        if (x.hasAttribute('class', 'haha') == true) {
+            x.innerHTML = "hello mai hu h1 tag mujhme haha class lagi hai";
+            x.style.color = 'red'
+        } else {
+            x.innerHTML = "lol"
+        }
+
+        function p() {
+            console.log(x.innerHTML + ' hello')
+        }
+        p()
+
+        const watch = new Date;
+        const time = watch.getTime()
+        const min = watch.getMinutes()
+        const day = watch.getDay()
+        const year = watch.getFullYear()
+        const sec = watch.getSeconds()
+        const month = watch.getMonth()
+        const date = watch.getDate()
+        const ghnta = watch.getHours()
+        const y= watch.toDateString()
+        const z = watch.toISOString()
+
+
+
+
+        let box = document.getElementsByTagName('div')[0];
+        // box.innerHTML = date + ' , ' + min + ' ' + sec + ' '+ date  + a + " "+ year;
+        box.innerHTML = ` ${y} ${min} ${sec} <b>on</b> ${date} ${month} ${year} ${z} `
+    </script>
+
 </body>
+
 </html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/css/chatGPT.css">
+  </head>
+  <body>
+    <header>
+      <h1>My Portfolio</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero">
+      <h2>Welcome to my portfolio website</h2>
+      <p>Check out my work and get in touch</p>
+      <a href="#" class="button">View Portfolio</a>
+    </section>
+
+    <section id="portfolio">
+      <h2>My Portfolio</h2>
+      <div class="gallery">
+        <img src="img/portfolio-1.jpg" alt="Project 1">
+        <img src="img/portfolio-2.jpg" alt="Project 2">
+        <img src="img/portfolio-3.jpg" alt="Project 3">
+        <img src="img/portfolio-4.jpg" alt="Project 4">
+        <img src="img/portfolio-5.jpg" alt="Project 5">
+        <img src="img/portfolio-6.jpg" alt="Project 6">
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <input type="submit" value="Send Message" class="button">
+      </form>
+    </section>
+
+    <footer>
+      <p>&copy; 2023 My Portfolio</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Toggle navigation menu on mobile devices
+const toggleMenu = () => {
+  const nav = document.querySelector('nav');
+  nav.classList.toggle('active');
+};
+
+// Smooth scrolling to anchor links
+const smoothScroll = (target, duration) => {
+  const targetElement = document.querySelector(target);
+  const targetPosition = targetElement.offsetTop;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  let startTime = null;
+
+  const ease = (t, b, c, d) => {
+    t /= d / 2;
+    if (t < 1) return c / 2 * t * t + b;
+    t--;
+    return -c / 2 * (t * (t - 2) - 1) + b;
+  };
+
+  const animation = (currentTime) => {
+    if (startTime === null) startTime = currentTime;
+    const timeElapsed = currentTime - startTime;
+    const run = ease(timeElapsed, startPosition, distance, duration);
+    window.scrollTo(0, run);
+    if (timeElapsed < duration) requestAnimationFrame(animation);
+  };
+
+  requestAnimationFrame(animation);
+};
+
+// Add smooth scrolling to anchor links
+const navLinks = document.querySelectorAll('nav a');
+navLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = link.getAttribute('href');
+    smoothScroll(target, 1000);
+  });
+});
+
+// Filter gallery images by category
+const filterGallery = (category) => {
+  const gallery = document.querySelector('.gallery');
+  const images = gallery.querySelectorAll('img');
+
+  images.forEach(image => {
+    const categories = image.getAttribute('data-categories').split(',');
+    if (categories.includes(category) || category === 'all') {
+      image.classList.remove('hidden');
+    } else {
+      image.classList.add('hidden');
+    }
+  });
+};
+
+// Add filter functionality to gallery buttons
+const filterButtons = document.querySelectorAll('#portfolio button');
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.getAttribute('data-category');
+    filterGallery(category);
+  });
+});
+
+// Submit form data via AJAX
+const form = document.querySelector('form');
+const formResponse = document.querySelector('#form-response');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('POST', form.getAttribute('action'));
+  xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  xhr.onreadystatechange = () => {
+    if (xhr.readyState === 4) {
+      if (xhr.status === 200) {
+        formResponse.textContent = 'Thanks for contacting us!';
+        form.reset();
+      } else {
+        formResponse.textContent = 'There was a problem submitting the form. Please try again.';
+      }
+    }
+  };
+
+  xhr.send(new URLSearchParams(formData).toString());
+});
+
+    </script>
+  </body>
+</html>

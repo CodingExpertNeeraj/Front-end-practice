@@ -1,0 +1,22 @@
+body{
+    background-color: red;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    display: grid;
+    grid-column: span 4;
+    margin: 2px;
+}
+.calculator{
+    display: grid;
+    grid-template-columns: repeat(4,2fr);
+    border: 1px solid black;
+}
+button{
+    margin: 15px;
+}

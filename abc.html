@@ -4,9 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/abc.css">
+    <title>div practice</title>
 </head>
 <body>
+    <div class="container">
+        <div class="redbox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque nesciunt neque beatae minima debitis quasi laboriosam error eveniet nemo sapiente natus, dolores corrupti amet ex laborum ratione. Officia tempora impedit quia vel voluptas praesentium, officiis fuga voluptates totam distinctio ea laborum sapiente odit reiciendis laboriosam, animi nostrum optio, dolor mollitia!</div>
+        <div class="bluebox">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos architecto tenetur repellat obcaecati cumque incidunt consequuntur sint quaerat, impedit, odit vero exercitationem earum. Quo debitis eos vero placeat, ullam, ipsum commodi beatae reiciendis possimus ea explicabo atque aliquid illo animi fuga dolorum quas id, dicta aut eius voluptatem! Nostrum, praesentium!</div>
+        
+    </div>
+
+    <div class="container2">
+        
+            <img src="https://media.istockphoto.com/id/1364409548/photo/the-sun-rising-over-mountains-on-a-winter-day.jpg?b=1&s=170667a&w=0&k=20&c=cYWoQBSlPLAndWN4UgM85k_gRHsXg9PCP580XNR7LkA=" alt="">
+        
+        
+            <img src="https://media.istockphoto.com/id/1317857006/photo/beautiful-sunset-at-the-sea.jpg?b=1&s=170667a&w=0&k=20&c=jXnWeU8okPE6hhdyrFVeRxk30qdoGghfas_AMvW_uWk=" alt="">
+        </div>
+    </div>
+    <script>
+        let rb = document.querySelector(".redbox");
+        let bb = document.querySelector(".bluebox");
+        let cont = document.querySelector(".container");
+
+        setInterval(() => {
+            cont.style = "display:block";
+            
+        }, 10000);
+
     
+    </script>
 </body>
 </html>

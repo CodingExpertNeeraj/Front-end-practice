@@ -1,0 +1,51 @@
+.redbox{
+    height: 150px;
+    border: 1px solid;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    background: red;
+}
+.bluebox{
+    height: 150px;
+    border: 1px solid;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    background: blue;
+}
+.container{
+    display: flex;
+    /* padding: 10px; */
+    box-sizing: border-box;
+    margin: 0 2px;
+}
+@media(min-width:768px){
+    .redbox, .bluebox{
+        margin: 5px;
+        border: none;
+
+    }
+}
+
+
+.container2{
+    display: flex;
+    width: 100%;
+}
+img{
+    width: 45%;
+    margin: 2%;
+}
+
+@media(max-width:768px){
+    .container2{
+        display: block;
+    }
+    img{
+        width: 98%;
+        padding: 5px;
+        margin: auto;
+    }
+    
+} 

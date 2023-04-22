@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .para {
+            color: red;
+            font-size: 30px;
+            transition: all 5s;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Today we will see how to get sum of two numbers</h1>
+
+    <p>My name is neeraj tiwari</p>
 
     <script>
         //static type
@@ -15,8 +26,8 @@
         let b = 9;
         // now what we will do 
         let c = a + b;
-        console.log("The sum of two numbers is" +  ":" +  c);
-        document.write("The sum of two numbers is" +  ":" +  c);
+        console.log("The sum of two numbers is" + ":" + c);
+        document.write("The sum of two numbers is" + ":" + c);
         //dynamic type
         // var a;
 
@@ -28,6 +39,18 @@
         console.log("neeraj");
         console.log("tiwari");
         console.timeEnd("time")
+
+        var time = Date = new Date()
+        document.write(time)
+        document.querySelector("p").classList.add('para');
+
+        setInterval(() => {
+            document.querySelector("p").classList.toggle('para');
+            document.querySelector(".para").style.fontSize= "80px"
+
+
+        }, 5000);
     </script>
 </body>
+
 </html>
